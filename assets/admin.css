@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* -------------------------------------------------------------
  * WordPress 7 Toggle
  * ------------------------------------------------------------- */
@@ -325,4 +326,326 @@
     .wp-core-ui .button {
         font-size: 18px;
     }
+=======
+/* -------------------------------------------------------------
+ * WordPress 7 Toggle
+ * ------------------------------------------------------------- */
+
+.components-form-toggle {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.components-form-toggle__input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.components-form-toggle__track {
+    width: 36px;
+    height: 18px;
+    background: #8c8f94;
+    border-radius: 999px;
+    transition: background 0.2s ease;
+    position: relative;
+}
+
+.components-form-toggle__thumb {
+    width: 14px;
+    height: 14px;
+    background: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    transition: transform 0.2s ease;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.4);
+}
+
+.components-form-toggle__input:checked + .components-form-toggle__track {
+    background: #2271b1;
+}
+
+.components-form-toggle__input:checked + .components-form-toggle__track + .components-form-toggle__thumb {
+    transform: translateX(18px);
+}
+
+/* -------------------------------------------------------------
+ * Light mode select fixes
+ * ------------------------------------------------------------- */
+
+.lwd-filters select,
+.lwd-filters input[type="search"] {
+    min-width: 160px;
+    padding: 4px 6px;
+	border: 1px solid #ccc;
+    border-radius: 2px;
+}
+
+.lwd-filters {
+    display: flex;
+	flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+	margin: 12px 0px;
+}
+
+.lwd-filters input[type="search"],
+.lwd-filters select {
+	flex: 1 1 64px;
+	min-width: 140px;
+    height: 32px;
+    line-height: 32px;
+    padding: 0 8px;
+    box-sizing: border-box;
+}
+
+/* -------------------------------------------------------------
+ * Badge colors (levels + sources)
+ * ------------------------------------------------------------- */
+
+.lwd-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-size: 11px;
+    font-weight: 600;
+    color: #fff;
+}
+
+/* PSR-3 levels */
+.lwd-level-emergency { background:#000; }
+.lwd-level-alert     { background:#6610f2; }
+.lwd-level-critical  { background:#b21f2d; }
+.lwd-level-error     { background:#dc3545; }
+.lwd-level-warning   { background:#ffc107; color:#000; }
+.lwd-level-notice    { background:#007bff; }
+.lwd-level-info      { background:#17a2b8; }
+.lwd-level-debug     { background:#6c757d; }
+
+/* PHP levels */
+.lwd-level-deprecated        { background:#795548; }
+.lwd-level-user_deprecated   { background:#8d6e63; }
+.lwd-level-strict            { background:#455a64; }
+.lwd-level-parse             { background:#5d4037; }
+.lwd-level-core_error        { background:#c62828; }
+.lwd-level-core_warning      { background:#f9a825; color:#000; }
+.lwd-level-compile_error     { background:#ad1457; }
+.lwd-level-compile_warning   { background:#ffb300; color:#000; }
+.lwd-level-recoverable_error { background:#6a1b9a; }
+.lwd-level-user_error        { background:#d32f2f; }
+.lwd-level-user_warning      { background:#fbc02d; color:#000; }
+.lwd-level-user_notice       { background:#0288d1; }
+
+/* Sources */
+.lwd-source-php      { background:#20c997; }
+.lwd-source-wordpress,
+.lwd-source-wp       { background:#0073aa; }
+.lwd-source-rest_api { background:#6f42c1; }
+.lwd-source-login    { background:#10b981; }
+
+/* -------------------------------------------------------------
+ * Table logs
+ * ------------------------------------------------------------- */
+
+#lwd-logs-table {
+	border-radius: 2px;
+	min-width: 600px;
+    border-collapse: collapse;
+}
+
+.lwd-logs-wrapper {
+    overflow-x: auto;
+}
+
+/* -------------------------------------------------------------
+ * Table header sorting indicators
+ * ------------------------------------------------------------- */
+
+/* Cursor pointer on hover */
+#lwd-logs-table th {
+    cursor: pointer;
+    position: relative;
+}
+
+/* Highlight sorted column */
+#lwd-logs-table th.sorted-column {
+    background-color: #eaf3ff;
+}
+
+/* Ascending arrow */
+#lwd-logs-table th.sorted-asc::after {
+    content: "▲";
+    position: absolute;
+    right: 8px;
+    color: #2271b1;
+    font-size: 10px;
+}
+
+/* Descending arrow */
+#lwd-logs-table th.sorted-desc::after {
+    content: "▼";
+    position: absolute;
+    right: 8px;
+    color: #2271b1;
+    font-size: 10px;
+}
+
+/* -------------------------------------------------------------
+ * Column widths
+ * ------------------------------------------------------------- */
+.lwd-logs .column-id {
+    width: 60px;
+    text-align: left;
+}
+
+.lwd-logs .column-level {
+    width: 110px;
+}
+
+.lwd-logs .column-source {
+    width: 120px;
+}
+
+.lwd-logs .column-message {
+    width: auto;
+    word-break: break-word;
+}
+
+.lwd-logs .column-date {
+    width: 160px;
+    text-align: center;
+}
+
+/* -------------------------------------------------------------
+ * Forms
+ * ------------------------------------------------------------- */
+.lwd-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.lwd-actions form {
+    margin: 0;
+}
+
+/* -------------------------------------------------------------
+ * Notice
+ * ------------------------------------------------------------- */
+.lwd-toast {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    background: #1e1e1e;
+    color: #fff;
+    padding: 10px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity .25s ease, transform .25s ease;
+    z-index: 99999;
+}
+
+.lwd-toast.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* -------------------------------------------------------------
+ * WP7 NAV
+ * ------------------------------------------------------------- */
+
+.wrap h1 {
+	padding-bottom:32px;
+}
+
+.health-check-tabs-wrapper {
+    display: flex;
+    border-bottom: 1px solid #c3c4c7;
+    margin-bottom: 20px;
+}
+
+.health-check-tab {
+    padding: 8px 16px;
+    #background: #f6f7f7;
+    #border: 1px solid #c3c4c7;
+    border-bottom: none;
+    border-radius: 3px 3px 0 0;
+    text-decoration: none;
+    color: #1d2327;
+    font-weight: 500;
+	line-height: 1.5;
+}
+
+.health-check-tab:hover {
+    #background: #fff;
+    #color: #000;
+}
+
+.health-check-tab.active,
+.health-check-tab[aria-current="page"] {
+    #background: #fff;
+    border-bottom: 1px solid #fff;
+    color: #000;
+    font-weight: 600;
+}
+
+.hide-if-no-js {
+    display: flex;
+}
+
+/* -------------------------------------------------------------
+ * Donation page
+ * ------------------------------------------------------------- */
+.lwd-donation {
+	text-align: center;
+	font-weight: 600;
+	line-height: 1.3;
+	font-size: 14px;
+}
+
+.lwd-donation-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 32px;
+    margin: 20px 0;
+}
+
+.lwd-donation-box img {
+    height: 32px;
+}
+
+.lwd-donation-box img:hover {
+    transform: scale(1.05);
+    transition: transform .15s ease;
+}
+
+/* Mobile breakpoint */
+@media (max-width: 600px) {
+    .lwd-filters {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .lwd-filters input[type="search"],
+    .lwd-filters select {
+        width: 100%;
+    }
+	
+	.lwd-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .lwd-actions button {
+        width: 100%;
+    }
+>>>>>>> b3a77f11d11aa9406380516ad09d905663999645
 }

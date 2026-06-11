@@ -191,4 +191,8 @@ msgstr ""
 
 #: includes/class-lwd-admin.php
 msgid "Thank you!"
+<<<<<<< HEAD
 msgstr ""
+=======
+msgstr ""
+>>>>>>> b3a77f11d11aa9406380516ad09d905663999645

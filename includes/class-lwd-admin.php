@@ -153,6 +153,7 @@ class LWD_Admin {
 		);
     }
 
+<<<<<<< HEAD
 	public static function render_header() {
 		?>
 		<div class="wrap">
@@ -161,12 +162,15 @@ class LWD_Admin {
 		<?php
 	}			
 
+=======
+>>>>>>> b3a77f11d11aa9406380516ad09d905663999645
     /**
      * Render Logs page
      */
 	public static function render_logs_page() {
 		?>
 		<div class="wrap">
+<<<<<<< HEAD
 			<?php self::render_header();
 
 			if ( isset( $_GET['deleted'] ) ) : ?>
@@ -177,6 +181,18 @@ class LWD_Admin {
 
 			self::render_tabs( 'logs' );
 			self::render_logs_content(); ?>
+=======
+			<h1>LiKoToN WP Debug</h1>
+
+			<?php if ( isset( $_GET['deleted'] ) ) : ?>
+				<div class="notice notice-success is-dismissible">
+					<p><?php esc_html_e( 'All logs deleted.', LWD_TEXTDOMAIN ); ?></p>
+				</div>
+			<?php endif; ?>
+
+			<?php self::render_tabs( 'logs' ); ?>
+			<?php self::render_logs_content(); ?>
+>>>>>>> b3a77f11d11aa9406380516ad09d905663999645
 		</div>
 		<?php
 	}
@@ -213,10 +229,15 @@ class LWD_Admin {
 		</div>
 	
         <div class="wrap">
+<<<<<<< HEAD
             
             <?php
 			self::render_header();
 			self::render_tabs( 'settings' ); ?>
+=======
+            <h1>LiKoToN WP Debug</h1>
+            <?php self::render_tabs( 'settings' ); ?>
+>>>>>>> b3a77f11d11aa9406380516ad09d905663999645
 
             <form method="post" id="lwd-settings-form">
                 <?php wp_nonce_field( 'lwd_save_settings', 'lwd_nonce' ); ?>
@@ -286,10 +307,16 @@ class LWD_Admin {
 	public static function render_donation_page() {
     ?>
     <div class="wrap">
+<<<<<<< HEAD
 
         <?php
 		self::render_header();
 		self::render_tabs( 'donation' ); ?>
+=======
+        <h1>LiKoToN WP Debug</h1>
+
+        <?php self::render_tabs( 'donation' ); ?>
+>>>>>>> b3a77f11d11aa9406380516ad09d905663999645
 
         <p class="lwd-donation"><?php esc_html_e( 'If you like what I do, please consider a small donation to support further development.', LWD_TEXTDOMAIN ); ?></p>
 
