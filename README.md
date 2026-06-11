@@ -55,6 +55,13 @@ Includes a clean log viewer with filters, sorting, dark mode, CSV export, and au
 2. Activate plugin
 3. Logs appear in the main admin menu
 
+## Developer API
+
+### Custom logs
+```php
+LWD_Logger::log( 'info', 'custom_source', 'Something happened', [ 'extra' => 'data' ] );
+```
+
 ## Supported log levels
 PSR-3 + extended PHP levels:
 - debug,
